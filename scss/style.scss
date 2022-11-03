@@ -1,0 +1,416 @@
+@import "./base/reset";
+@import "./utilities/variable";
+@import "./utilities/mixins";
+@import "./layout/general";
+@import "./layout/header";
+@import "./layout/main-index";
+@import "./layout/footer";
+
+body {
+  background: black;
+  padding-bottom: 6.5rem;
+}
+
+section {
+  padding: 5rem 9%;
+}
+
+.navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: flex-end;
+
+  a {
+    padding: 2rem;
+    font-size: 1rem;
+    background: rgb(48, 46, 46);
+    flex: 1;
+    color: white;
+    text-align: center;
+    transition: .2s linear;
+
+
+    &:hover {
+      background: $luquok;
+      padding-bottom: 6rem;
+    }
+
+    .imgnav {
+      height: 20px;
+      padding-right: .5rem;
+    }
+  }
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+  min-height: calc(100vh - 6.5rem);
+
+  .image {
+    flex: 1 1 42rem;
+    text-align: center;
+
+    img {
+
+      height: 20rem;
+      width: 20rem;
+    }
+  }
+}
+
+.contenedor {
+  flex: 1 1 42rem;
+
+  h3 {
+    color: white;
+    font-size: 4rem;
+    padding-bottom: .5rem;
+  }
+
+  span {
+    font-size: 3rem;
+    color: $luquok;
+    padding: .5rem 0;
+    display: block;
+  }
+
+  p {
+    font-size: 1.5rem;
+    color: white;
+    padding: 1rem 0;
+    line-height: 2;
+  }
+}
+
+.hab {
+
+  .box-contenedor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+
+
+    .box {
+      padding: 1rem;
+      width: 15rem;
+      text-align: center;
+      border-radius: .5rem;
+      background: $gris;
+
+      h3 {
+        color: white;
+      }
+    }
+
+    img {
+      height: 7rem;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.redes {
+
+  .box-container {
+    display: flex;
+    gap: 5px;
+
+    .box {
+      text-align: center;
+      padding: 1rem;
+      border-radius: .5rem;
+      background: $gris;
+
+      &:hover .image img {
+        transform: scale(1.2);
+      }
+
+      .image {
+        height: 25rem;
+        width: 100%;
+        border-radius: .5rem;
+        overflow: hidden;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          transition: .2s linear;
+        }
+      }
+
+      .content {
+
+        .icons {
+          position: relative;
+          top: -1rem;
+          border-radius: .5rem;
+          padding: 1.5rem;
+          display: inline-block;
+          background: black;
+
+          a {
+            font-size: 1.4rem;
+            margin: 0 1rem;
+            color: white;
+
+            &:hover {
+              color: $luquok;
+            }
+
+          }
+        }
+
+        h3 {
+          font-size: 2rem;
+          color: white;
+          font-weight: normal;
+        }
+
+        p {
+          font-size: 1.5rem;
+          color: $luquok;
+          padding: 1rem 0;
+          line-height: 2;
+        }
+      }
+    }
+  }
+}
+
+.proyectos {
+  text-align: center;
+
+  .box-container {
+    margin-bottom: 1rem;
+
+    .box {
+      height: 20rem;
+      overflow: hidden;
+      position: relative;
+
+      &:hover {
+        .content {
+          transform: translateY(0%);
+        }
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: $luquok;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        transform: translateY(-100%);
+        transition: .2s linear;
+
+        h3 {
+          @include titulo-black;
+        }
+
+        p {
+          padding: 1rem 0;
+          font-size: 1.5rem;
+          line-height: 2;
+          color: black;
+        }
+
+        a {
+          font-size: 2rem;
+          color: black;
+
+          &:hover {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.contacto {
+
+
+
+  p {
+    font-size: 1.5rem;
+    line-height: 2;
+    color: lightblue;
+    padding: 1rem 0;
+  }
+
+  .box-contac {
+    padding: 10rem 0;
+    padding-left: 15rem;
+
+    .box {
+      display: flex;
+      gap: 2rem;
+      padding: 1rem 0;
+
+      h3 {
+        font-size: 2rem;
+        color: white;
+      }
+    }
+  }
+}
+
+
+
+@media (max-width:992px) {
+
+  .navbar {
+
+    span {
+      font-size: 20px;
+      display: none;
+    }
+  }
+
+  .home {
+    text-align: center;
+  }
+
+}
+
+
+
+@media (max-width:768px) {
+
+
+
+  .home {
+    text-align: center;
+  }
+
+  .contenedor {
+    p {
+      display: none;
+    }
+  }
+
+  .hab {
+    .box-contenedor {
+      .box {
+        padding: 1rem;
+        width: 12rem;
+        text-align: center;
+        border-radius: .5rem;
+        background: $gris;
+
+        h3 {
+          color: white;
+        }
+      }
+
+      img {
+        height: 7rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  .redes {
+    .box-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .box {
+        padding: 1rem;
+        width: 12rem;
+        text-align: center;
+        border-radius: .5rem;
+        background: $gris;
+
+        .image {
+          height: 7rem;
+          margin-bottom: 1rem;
+        }
+
+        .content {
+          .icons {
+            background: none;
+            justify-content: center;
+          }
+
+          p {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .contacto {
+    .box-contac {
+      padding: 10rem 0;
+      padding-left: 10rem;
+    }
+  }
+}
+
+@media (max-width:564px) {
+
+  .navbar {
+
+
+    span {
+      display: none;
+
+    }
+  }
+
+  .hab {
+    .box-contenedor {
+      .box {
+        padding: .5rem;
+        width: 8rem;
+        text-align: center;
+        border-radius: .5rem;
+        background: $gris;
+
+        h3 {
+          color: white;
+        }
+      }
+
+      img {
+        height: 5rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+
+
+  .contacto {
+    .box-contac {
+      padding: 5rem 0;
+      padding-left: 5rem;
+    }
+  }
+
+}

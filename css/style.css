@@ -1,0 +1,251 @@
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none; }
+
+body {
+  background: black;
+  padding-bottom: 6.5rem; }
+
+section {
+  padding: 5rem 9%; }
+
+.navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: flex-end; }
+  .navbar a {
+    padding: 2rem;
+    font-size: 1rem;
+    background: #302e2e;
+    flex: 1;
+    color: white;
+    text-align: center;
+    transition: .2s linear; }
+    .navbar a:hover {
+      background: lightblue;
+      padding-bottom: 6rem; }
+    .navbar a .imgnav {
+      height: 20px;
+      padding-right: .5rem; }
+
+.home {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+  min-height: calc(100vh - 6.5rem); }
+  .home .image {
+    flex: 1 1 42rem;
+    text-align: center; }
+    .home .image img {
+      height: 20rem;
+      width: 20rem; }
+
+.contenedor {
+  flex: 1 1 42rem; }
+  .contenedor h3 {
+    color: white;
+    font-size: 4rem;
+    padding-bottom: .5rem; }
+  .contenedor span {
+    font-size: 3rem;
+    color: lightblue;
+    padding: .5rem 0;
+    display: block; }
+  .contenedor p {
+    font-size: 1.5rem;
+    color: white;
+    padding: 1rem 0;
+    line-height: 2; }
+
+.hab .box-contenedor {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px; }
+  .hab .box-contenedor .box {
+    padding: 1rem;
+    width: 15rem;
+    text-align: center;
+    border-radius: .5rem;
+    background: #302e2e; }
+    .hab .box-contenedor .box h3 {
+      color: white; }
+  .hab .box-contenedor img {
+    height: 7rem;
+    margin-bottom: 1rem; }
+
+.redes .box-container {
+  display: flex;
+  gap: 5px; }
+  .redes .box-container .box {
+    text-align: center;
+    padding: 1rem;
+    border-radius: .5rem;
+    background: #302e2e; }
+    .redes .box-container .box:hover .image img {
+      transform: scale(1.2); }
+    .redes .box-container .box .image {
+      height: 25rem;
+      width: 100%;
+      border-radius: .5rem;
+      overflow: hidden; }
+      .redes .box-container .box .image img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transition: .2s linear; }
+    .redes .box-container .box .content .icons {
+      position: relative;
+      top: -1rem;
+      border-radius: .5rem;
+      padding: 1.5rem;
+      display: inline-block;
+      background: black; }
+      .redes .box-container .box .content .icons a {
+        font-size: 1.4rem;
+        margin: 0 1rem;
+        color: white; }
+        .redes .box-container .box .content .icons a:hover {
+          color: lightblue; }
+    .redes .box-container .box .content h3 {
+      font-size: 2rem;
+      color: white;
+      font-weight: normal; }
+    .redes .box-container .box .content p {
+      font-size: 1.5rem;
+      color: lightblue;
+      padding: 1rem 0;
+      line-height: 2; }
+
+.proyectos {
+  text-align: center; }
+  .proyectos .box-container {
+    margin-bottom: 1rem; }
+    .proyectos .box-container .box {
+      height: 20rem;
+      overflow: hidden;
+      position: relative; }
+      .proyectos .box-container .box:hover .content {
+        transform: translateY(0%); }
+      .proyectos .box-container .box img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover; }
+      .proyectos .box-container .box .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: lightblue;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        transform: translateY(-100%);
+        transition: .2s linear; }
+        .proyectos .box-container .box .content h3 {
+          font-size: 2.5rem;
+          color: black;
+          text-transform: uppercase;
+          font-weight: normal; }
+        .proyectos .box-container .box .content p {
+          padding: 1rem 0;
+          font-size: 1.5rem;
+          line-height: 2;
+          color: black; }
+        .proyectos .box-container .box .content a {
+          font-size: 2rem;
+          color: black; }
+          .proyectos .box-container .box .content a:hover {
+            color: white; }
+
+.contacto p {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: lightblue;
+  padding: 1rem 0; }
+
+.contacto .box-contac {
+  padding: 10rem 0;
+  padding-left: 15rem; }
+  .contacto .box-contac .box {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 0; }
+    .contacto .box-contac .box h3 {
+      font-size: 2rem;
+      color: white; }
+
+@media (max-width: 992px) {
+  .navbar span {
+    font-size: 20px;
+    display: none; }
+  .home {
+    text-align: center; } }
+
+@media (max-width: 768px) {
+  .home {
+    text-align: center; }
+  .contenedor p {
+    display: none; }
+  .hab .box-contenedor .box {
+    padding: 1rem;
+    width: 12rem;
+    text-align: center;
+    border-radius: .5rem;
+    background: #302e2e; }
+    .hab .box-contenedor .box h3 {
+      color: white; }
+  .hab .box-contenedor img {
+    height: 7rem;
+    margin-bottom: 1rem; }
+  .redes .box-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .redes .box-container .box {
+      padding: 1rem;
+      width: 12rem;
+      text-align: center;
+      border-radius: .5rem;
+      background: #302e2e; }
+      .redes .box-container .box .image {
+        height: 7rem;
+        margin-bottom: 1rem; }
+      .redes .box-container .box .content .icons {
+        background: none;
+        justify-content: center; }
+      .redes .box-container .box .content p {
+        display: none; }
+  .contacto .box-contac {
+    padding: 10rem 0;
+    padding-left: 10rem; } }
+
+@media (max-width: 564px) {
+  .navbar span {
+    display: none; }
+  .hab .box-contenedor .box {
+    padding: .5rem;
+    width: 8rem;
+    text-align: center;
+    border-radius: .5rem;
+    background: #302e2e; }
+    .hab .box-contenedor .box h3 {
+      color: white; }
+  .hab .box-contenedor img {
+    height: 5rem;
+    margin-bottom: 1rem; }
+  .contacto .box-contac {
+    padding: 5rem 0;
+    padding-left: 5rem; } }
