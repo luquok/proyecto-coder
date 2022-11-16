@@ -15,6 +15,18 @@ section {
   padding: 5rem 9%;
 }
 
+.nosotros{
+  text-align: center;
+  font-size: 4vw;
+  color:white;
+  text-transform: uppercase;
+
+  span{
+    text-transform: uppercase;
+    color:$luquok;
+  }
+}
+
 .navbar {
   position: fixed;
   bottom: 0;

@@ -12,6 +12,15 @@ body {
 section {
   padding: 5rem 9%; }
 
+.nosotros {
+  text-align: center;
+  font-size: 4vw;
+  color: white;
+  text-transform: uppercase; }
+  .nosotros span {
+    text-transform: uppercase;
+    color: lightblue; }
+
 .navbar {
   position: fixed;
   bottom: 0;
